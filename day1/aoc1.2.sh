@@ -1,0 +1,1 @@
+awk '{if (NR>3) {newwindow=prevprev+prev+$1; if (newwindow > lastwindow) {increased++}; lastwindow=newwindow};prevprev = prev; prev=$1} END{print increased}' < input
